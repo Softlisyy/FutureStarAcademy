@@ -81,7 +81,7 @@ const Navbar = () => {
 
       <div className="nav-container">
         <Link to="/" className="nav-logo">
-          <img src="/picture/logo.png" alt="Future Stars Academy Logo" className="logo-image" />
+          <img src={`${import.meta.env.BASE_URL}picture/logo.png`} alt="Future Stars Academy Logo" className="logo-image" />
           <span className="logo-text">Future Stars Academy</span>
         </Link>
         

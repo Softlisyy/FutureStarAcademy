@@ -100,7 +100,7 @@ const Homepage = () => {
       <div className="mainbody">
         <div className="secondpart">
           <img 
-            src="/picture/herophoto.png" 
+            src={`${import.meta.env.BASE_URL}picture/herophoto.png`}
             height="550" 
             width="700" 
             alt="Students in classroom"
@@ -135,10 +135,10 @@ const Homepage = () => {
               muted
               loop
               playsInline
-              poster="/picture/mainphoto.png"
+              poster={`${import.meta.env.BASE_URL}picture/mainphoto.png`}
               preload="auto"
             >
-              <source src="/video/Tour.mp4" type="video/mp4" />
+              <source src={`${import.meta.env.BASE_URL}video/Tour.mp4`} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
@@ -164,7 +164,7 @@ const Homepage = () => {
           </p>
           <div className="festival-image-container">
             <img 
-              src="/picture/festival.png" 
+              src={`${import.meta.env.BASE_URL}picture/festival.png`}
               width="650" 
               alt="Festival celebration"
             />
@@ -177,28 +177,28 @@ const Homepage = () => {
         
         <div className="fourthpart" ref={fourthPartRef}>
           <div className="image-container">
-            <img src="/picture/quiz.png" alt="Quiz competition" />
+            <img src={`${import.meta.env.BASE_URL}picture/quiz.png`} alt="Quiz competition" />
             <div className="caption">
               Our school organizes quiz competitions to encourage curiosity, critical thinking, and 
               teamwork among students.
             </div>
           </div>
           <div className="image-container">
-            <img src="/picture/environmentday.png" alt="Environment Day" />
+            <img src={`${import.meta.env.BASE_URL}picture/environmentday.png`} alt="Environment Day" />
             <div className="caption">
               We celebrate Environment Day by tree planting, with students' participation to promote a 
               greener and healthier future.
             </div>
           </div>
           <div className="image-container">
-            <img src="/picture/kindergardenGraduation.png" alt="Kindergarten Graduation" />
+            <img src={`${import.meta.env.BASE_URL}picture/kindergardenGraduation.png`} alt="Kindergarten Graduation" />
             <div className="caption">
               Our Kindergarten Graduation celebrates the young learners as they proudly transition from 
               early childhood education.
             </div>
           </div>
           <div className="image-container">
-            <img src="/picture/kids.png" alt="Junior student activities" />
+            <img src={`${import.meta.env.BASE_URL}picture/kids.png`} alt="Junior student activities" />
             <div className="caption">
               Our junior students engage in fun and educational extra curricular activities that help them 
               explore talents.

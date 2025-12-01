@@ -8,7 +8,7 @@ const Footnote = () => {
     <footer className='footnote'>
       <div className='footer-container'>
         <div className='footer-section logo-section'>
-          <img src="/picture/logo.png' alt='Future Stars Academy Logo' className='footer-logo"/>
+          <img src={`${import.meta.env.BASE_URL}picture/logo.png' alt='Future Stars Academy Logo' className='footer-logo`}/>
           <h3 className='footer-brand'>Future Stars Academy</h3>
           <p className='footer-tagline'>Nurturing Excellence, Building Futures</p>
         </div>

@@ -121,7 +121,7 @@ const AdminSidebar = () => {
         <div className="sidebar-logo">
           {!isCollapsed && (
             <>
-              <img src="/picture/logo.png" alt="FSA Logo" className="sidebar-logo-img" />
+              <img src={`${import.meta.env.BASE_URL}picture//picture/logo.png`} alt="FSA Logo" className="sidebar-logo-img" />
               <h2>FSA Admin</h2>
             </>
           )}
