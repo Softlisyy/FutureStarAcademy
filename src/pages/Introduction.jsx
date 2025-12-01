@@ -72,9 +72,9 @@ const Introduction = () => {
           <section className="intro-section whatweoffer-section">
             <h2 className="section-title">What We Offer</h2>
             <div className='whatweofferimage'>
-            <img src="/picture/offer1.jpg' height="220px" width="330px"></img>
-            <img src="/picture/offer2.jpg'height="220px" width="350px"></img>
-            <img src="/picture/offer3.jpg' height="220x" width="400px"></img>
+            <img src="/picture/offer1.jpg" height="220px" width="330px"></img>
+            <img src="/picture/offer2.jpg"height="220px" width="350px"></img>
+            <img src="/picture/offer3.jpg" height="220x" width="400px"></img>
             </div>
             <div className="whatweoffercontent">
               <div className="offer-item">
@@ -129,7 +129,7 @@ const Introduction = () => {
             <div className='principal-section'>
             <h2 className="section-title">Message from the Principal</h2>
             <div className='principalmessage'>
-            <img src="/picture/principal.jpg'height="350px" ></img>
+            <img src="/picture/principal.jpg"height="350px" ></img>
             <p>“Our goal is to inspire students to dream big, think critically, and act with kindness.
             At FSA, every child is valued, supported, and encouraged to succeed.”</p>
             </div>
