@@ -18,12 +18,12 @@ const Calendar= () => {
       overview of the school year, ensuring that everyone stays connected and prepared.</p>
 
       <div className='Calendar-images'>
-      <img src="/picture/calender.jpg' alt='calender' className='Calendar-image' style={{width:'350px', height:'500px"}}/>
-      <img src="/picture/calender2.jpg' alt='calender' className='Calendar-image' style={{width:'350px', height:'500px"}}/>
-      <img src="/picture/cal3.jpg' alt='calender' className='Calendar-image' style={{width:'350px', height:'500px"}}/>
-      <img src="/picture/cal4.jpg' alt='calender' className='Calendar-image' style={{width:'350px', height:'500px"}}/>
-      <img src="/picture/cal5.jpg' alt='calender'className='Calendar-image' style={{width:'350px', height:'500px"}}/>
-      <img src="/picture/cal6.jpg' alt='calender' className='Calendar-image' style={{width:'350px', height:'500px"}}/>
+      <img src="/picture/calender.jpg" alt='calender' className='Calendar-image' style={{width:'350px', height:'500px'}}/>
+      <img src="/picture/calender2.jpg" alt='calender' className='Calendar-image' style={{width:'350px', height:'500px'}}/>
+      <img src="/picture/cal3.jpg" alt='calender' className='Calendar-image' style={{width:'350px', height:'500px'}}/>
+      <img src="/picture/cal4.jpg" alt='calender' className='Calendar-image' style={{width:'350px', height:'500px'}}/>
+      <img src="/picture/cal5.jpg" alt='calender' className='Calendar-image' style={{width:'350px', height:'500px'}}/>
+      <img src="/picture/cal6.jpg" alt='calender' className='Calendar-image' style={{width:'350px', height:'500px'}}/>
       </div>
 
     </div>

@@ -17,10 +17,10 @@ const Work = () => {
         student. Whether you are an experienced teacher or a professional eager to contribute to school 
         life, we invite you to explore our vacancies and become part of the FSA family.</p>
         <div className='work-images'>
-          <img src="/picture/vacancy.jpg' alt='"/>
-          <img src="/picture/vacancy1.jpg' alt='"/>
-          <img src="/picture/vacancy2.jpg' alt='"/>
-          <img src="/picture/vacancy3.jpg' alt='"/>
+          <img src="/picture/vacancy.jpg" alt=""/>
+          <img src="/picture/vacancy1.jpg" alt=""/>
+          <img src="/picture/vacancy2.jpg" alt=""/>
+          <img src="/picture/vacancy3.jpg" alt=""/>
         </div>
         <h3 className='work-heading'>Why Work with Us?</h3>
         <div className='workone'>
