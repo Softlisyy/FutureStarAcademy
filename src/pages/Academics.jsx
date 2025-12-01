@@ -23,21 +23,21 @@ const Academics = () => {
               <h3 className='achievements-heading'>Our Achivements </h3>
             <div className='achievements-sectionone'>
               <div className="achievement-image-container">
-                <img src='./picture/ach1.jpg' alt="" className="achievement-image-main" 
+                <img src="/picture/ach1.jpg' alt="" className="achievement-image-main" 
                 height={'330px'} style={{borderRadius:"10px"}}/>
-                <img src='./picture/new.jpeg' alt="" className="achievement-image-hover" 
-                height={'330px'} style={{borderRadius:"10px"}}/>
-              </div>
-              <div className="achievement-image-container">
-                <img src='./picture/ach2.jpg' alt="" className="achievement-image-main" 
-                height={'330px'} style={{borderRadius:"10px"}}/>
-                <img src='./picture/ach5Mumbai.jpeg' alt="" className="achievement-image-hover" 
+                <img src="/picture/new.jpeg' alt="" className="achievement-image-hover" 
                 height={'330px'} style={{borderRadius:"10px"}}/>
               </div>
               <div className="achievement-image-container">
-                <img src='./picture/ach4.jpg' alt="" className="achievement-image-main" 
+                <img src="/picture/ach2.jpg' alt="" className="achievement-image-main" 
                 height={'330px'} style={{borderRadius:"10px"}}/>
-                <img src='./picture/diya.jpg' alt="" className="achievement-image-hover" 
+                <img src="/picture/ach5Mumbai.jpeg' alt="" className="achievement-image-hover" 
+                height={'330px'} style={{borderRadius:"10px"}}/>
+              </div>
+              <div className="achievement-image-container">
+                <img src="/picture/ach4.jpg' alt="" className="achievement-image-main" 
+                height={'330px'} style={{borderRadius:"10px"}}/>
+                <img src="/picture/diya.jpg' alt="" className="achievement-image-hover" 
                 height={'330px'} style={{borderRadius:"10px"}}/>
               </div>
             </div>
@@ -46,7 +46,7 @@ const Academics = () => {
           <div className="academic-features">
             <div className="feature">
               <h3>Pre-primary/ Early Childhood </h3>
-              <img src='./picture/preprimary.jpg' alt="Junior Class" className="feature-image" 
+              <img src="/picture/preprimary.jpg' alt="Junior Class" className="feature-image" 
               width={'270px'} height={'200px'} style={{borderRadius:"5px"}}/>
               <p>Early childhood development focusing on basic skills and 
                 social interaction. Children are introduced to play-based learning, 
@@ -60,7 +60,7 @@ const Academics = () => {
             </div>
             <div className="feature">
               <h3>Primary/ Elementary</h3>
-              <img src='./picture/junior.jpg' alt="Junior Class" className="feature-image" 
+              <img src="/picture/junior.jpg' alt="Junior Class" className="feature-image" 
               width={'270px'} height={'200px'} style={{borderRadius:"5px", marginTop:"30px"}} padding top='4px'/>
               <p>
                 Foundation learning with focus on core subjects and creative development.The 
@@ -75,7 +75,7 @@ const Academics = () => {
             </div>
             <div className="feature">
               <h3>Secondary Education</h3>
-              <img src='./picture/secondary.jpg' alt="Junior Class" className="feature-image" 
+              <img src="/picture/secondary.jpg' alt="Junior Class" className="feature-image" 
               width={'270px'} height={'200px'} style={{borderRadius:"5px" , marginTop:"30px"}}/>
               <p>
                 Advanced curriculum preparing students for higher education and beyond.Students are 
@@ -93,9 +93,9 @@ const Academics = () => {
           <h3 className='achievements-heading'>Student Sucess Stories</h3>
           <div className='achievements-sectiontwo'>
             <div className="achievement-image-container">
-              <img src='./picture/achievent1.jpg' alt="" className="achievement-image-main" 
+              <img src="/picture/achievent1.jpg' alt="" className="achievement-image-main" 
               height={'400px'} style={{borderRadius:"10px"}}/>
-              <img src='./picture/diya.jpg' alt="" className="achievement-image-hover" 
+              <img src="/picture/diya.jpg' alt="" className="achievement-image-hover" 
               height={'430px'} style={{borderRadius:"10px"}}/>
             </div>
               <p className='achievements-sectionpara'> We proudly congratulate for securing a perfect 4.0 GPA in the Grade 10 examination.

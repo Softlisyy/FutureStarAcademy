@@ -23,7 +23,7 @@ import './App.css';
 function App() {
   return (
 
-    <Router basename="/FutureStarAcademy">
+    <Router basename="/">
       <div className="App">
         
         <Routes>
