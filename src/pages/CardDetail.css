@@ -1,0 +1,164 @@
+/* Card detail page styles for Mission, Vision, Values, Faculty, Facilities */
+.card-detail-page {
+  min-height: 100vh;
+  width: 100vw;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+}
+
+.card-detail-content {
+  width: 100%;
+  max-width: 700px;
+  padding: 40px 24px;
+  background: rgba(255,255,255,0.7);
+  border-radius: 22px;
+  box-shadow: 0 8px 32px rgba(44,62,80,0.14);
+}
+
+.card-detail-page h2 {
+  background: linear-gradient(135deg, #dc2626 0%, #1e40af 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  font-size: 2.2rem;
+  margin-bottom: 18px;
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.card-detail-page p {
+  color: #333;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.card-detail-page ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.card-detail-page li {
+  background: linear-gradient(135deg, #dc2626 0%, #1e40af 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 22px;
+}
+
+.card-detail-page li:before {
+  content: "★";
+  color: #f7cac9;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.card-detail-page:hover {
+  box-shadow: 0 12px 40px rgba(22,121,29,0.18);
+  transform: scale(1.03);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+/* Mission page specific styles */
+.mission-page {
+  min-height: 100vh;
+  width: 100vw;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+}
+.mission-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+.mission-icon {
+  font-size: 2.5rem;
+  filter: drop-shadow(0 2px 6px #8ec5fc);
+}
+.mission-header h2 {
+  font-size: 2.3rem;
+  color: #5f2c82;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+.mission-content {
+  width: 100%;
+  max-width: 700px;
+  padding: 40px 24px;
+  background: rgba(255,255,255,0.7);
+  border-radius: 22px;
+  box-shadow: 0 8px 32px rgba(44,62,80,0.14);
+  text-align: center;
+}
+.mission-lead {
+  font-size: 1.25rem;
+  color: #5f2c82;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+.mission-points {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 32px;
+}
+.mission-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: rgba(255,255,255,0.7);
+  border-radius: 12px;
+  padding: 18px 16px;
+  box-shadow: 0 2px 12px rgba(44,62,80,0.08);
+  font-size: 1.08rem;
+}
+.point-icon {
+  font-size: 2rem;
+  margin-top: 2px;
+}
+.mission-cta {
+  margin-top: 18px;
+}
+.mission-btn {
+  display: inline-block;
+  background: linear-gradient(90deg, #8ec5fc 0%, #e0c3fc 100%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 12px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(44,62,80,0.10);
+  transition: background 0.2s, transform 0.2s;
+}
+.mission-btn:hover {
+  background: linear-gradient(90deg, #e0c3fc 0%, #8ec5fc 100%);
+  transform: scale(1.05);
+}
+@media (max-width: 900px) {
+  .mission-content {
+    padding: 24px 8px;
+    max-width: 98vw;
+  }
+}

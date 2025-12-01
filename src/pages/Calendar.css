@@ -1,0 +1,31 @@
+.Calendar{
+    text-align: center;
+    
+    font-size: 36px;
+    background: linear-gradient(135deg, #dc2626 0%, #1e40af 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    margin-top: 4%;
+}
+.Calendar-para{
+    text-align: center;
+    margin: 20px 10% 40px 10%;
+    font-size: 20px;
+    color: #333;
+    line-height: 1.6;
+}
+.Calendar-images{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 40px;
+    
+}
+.Calendar-images img {
+    border: 4px double black;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.Calendar-image:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s;
+}

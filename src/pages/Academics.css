@@ -1,0 +1,273 @@
+/* Academics Page Styles */
+body {
+    background-color: #ffffff;
+}
+.mainbody{
+    margin-top: 3%;
+}
+
+.content-section {
+    padding: 60px 5%;
+    width: 100%;
+    margin: 0;
+    background-color: #ffffff;
+    
+}
+.achievements-heading{
+    /* background: linear-gradient(135deg, #dc2626 0%, #1e40af 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; */
+    font-weight: 800;
+    margin-bottom: 40px;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.achievements-heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 4px;
+    background: linear-gradient(90deg, #E63946 0%, #1D3557 100%);
+    border-radius: 2px;
+}
+.achievements-section{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    font-size: large;
+}
+
+.achievement-image-container {
+    position: relative;
+    display: inline-block;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: fit-content;
+    height: fit-content;
+}
+
+.achievement-image-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.achievement-image-main,
+.achievement-image-hover {
+    transition: opacity 0.3s ease;
+    display: block;
+    border-radius: 10px;
+    width: 380px;
+}
+
+.achievement-image-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.achievement-image-container:hover .achievement-image-hover {
+    opacity: 1;
+}
+
+.achievement-image-container:hover .achievement-image-main {
+    opacity: 0;
+}
+.achievements-sectionone{
+    margin-top: 4%;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    padding: 40px;
+}
+
+.content-section h2 {
+    /* background: linear-gradient(135deg, #dc2626 0%, #1e40af 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; */
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content-section > p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.academic-features {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin: 40px 0;
+    padding: 0 20px;
+}
+
+.feature {
+    flex: 1;
+    text-align: center;
+    padding: 30px 25px;
+    background: linear-gradient(135deg, rgba(220, 38, 38, 0.03) 0%, rgba(30, 64, 175, 0.03) 100%);
+    border-radius: 20px;
+    border: 2px solid rgba(30, 64, 175, 0.2);
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.feature:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 35px rgba(220, 38, 38, 0.2);
+    background: linear-gradient(135deg, rgba(220, 38, 38, 0.05) 0%, rgba(30, 64, 175, 0.05) 100%);
+    border-color: rgba(220, 38, 38, 0.3);
+}
+
+.feature h3 {
+    background: linear-gradient(135deg, #dc2626 0%, #1e40af 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    font-weight: 800;
+    margin-bottom: 20px;
+    font-size: 26px;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+.feature > p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    text-align: justify;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.feature-image {
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100% !important;
+    height: 220px !important;
+    object-fit: cover;
+}
+
+.feature-image:hover {
+    transform: scale(1.05);
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.feature-list li {
+    margin-bottom: 12px;
+    padding: 10px 15px;
+    font-size: 15px;
+    color: #555;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.feature-list li:hover {
+    background: linear-gradient(90deg, rgba(30, 64, 175, 0.08) 0%, rgba(220, 38, 38, 0.08) 100%);
+    padding-left: 20px;
+    transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+    .content-section {
+        padding: 40px 5%;
+    }
+    
+    .content-section h2 {
+        font-size: 28px;
+    }
+    
+    .achievements-sectionone {
+        flex-direction: column;
+        padding: 0 20px;
+        align-items: center;
+    }
+    
+    .achievement-image-container {
+        width: fit-content;
+    }
+    
+    .academic-features {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .feature {
+        width: 100%;
+        max-width: 500px;
+    }
+    
+    .achievements-sectiontwo {
+        flex-direction: column;
+        padding: 30px 20px;
+        gap: 30px;
+    }
+    
+    .achievements-sectiontwo .achievement-image-container {
+        min-width: 100%;
+        max-width: 400px;
+    }
+    
+    .achievements-sectionpara {
+        padding: 20px;
+        font-size: 16px;
+    }
+}
+.achievements-sectiontwo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+    padding: 40px 50px;
+    background: linear-gradient(135deg, rgba(30, 64, 175, 0.05) 0%, rgba(220, 38, 38, 0.03) 100%);
+    border-radius: 25px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.achievements-sectiontwo .achievement-image-container {
+    flex: 0 0 auto;
+}
+
+.achievements-sectionpara{
+    flex: 1;
+    font-size: 18px;
+    line-height: 2;
+    text-align: justify;
+    color: #555;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    border-left: 5px solid #1e40af;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
