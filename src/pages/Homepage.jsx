@@ -138,7 +138,7 @@ const Homepage = () => {
               poster="/picture/mainphoto.png"
               preload="auto"
             >
-              <source src="./video/Tour.mp4" type="video/mp4" />
+              <source src="/video/Tour.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
