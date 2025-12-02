@@ -26,12 +26,17 @@ const AboutUs = () => {
       </div>
     )
   };
+  const handleCardClick = (title) => {
+    if (extraContents[title]) {
+      setSelectedCard(title);
+    }
+  };
+
   return (
-    <>
-      
+    <div className="about-page">
         <Navbar />
       
-      <div className="mainbody">
+      <div className="about-body">
         <div className="content-section">
           <h2>Our Story</h2>
           <p>
@@ -73,7 +78,9 @@ const AboutUs = () => {
                 description: 'We celebrate excellence in academics, sports, arts, and community service. Our students consistently achieve remarkable results and make us proud.',
                 icon: '🏆'
               }
-            ].map((card, idx) => (
+            ].map((card, idx) => {
+              const hasExtra = Boolean(extraContents[card.title]);
+              return (
               <div className="about-card" key={idx}>
                 <div className="about-card-icon">{card.icon}</div>
                 <h3>{card.title}</h3>
@@ -85,8 +92,18 @@ const AboutUs = () => {
                     ))}
                   </ul>
                 )}
+                {hasExtra && (
+                  <button
+                    type="button"
+                    className="about-card-btn"
+                    onClick={() => handleCardClick(card.title)}
+                  >
+                    Learn More
+                  </button>
+                )}
               </div>
-            ))}
+            );
+            })}
           </div>
         </div>
         {selectedCard && extraContents[selectedCard] && (
@@ -96,7 +113,7 @@ const AboutUs = () => {
           </div>
         )}
       </div>
-    </>
+    </div>
   );
 };
 

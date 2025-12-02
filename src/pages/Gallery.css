@@ -1,14 +1,47 @@
 /* Gallery Page Styles */
-body {
+.gallery-page {
     background-color: #ffffff;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.mainbody {
+    margin: 90px auto 0;
+    max-width: 1200px;
+    padding: 0 24px 80px;
+}
+
+.content-section {
+    text-align: center;
+}
+
+.content-section h2 {
+    font-size: 48px;
+    font-weight: 800;
+    background: linear-gradient(135deg, #dc2626 0%, #1e40af 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 20px;
+}
+
+.content-section > p {
+    font-size: 18px;
+    color: #555;
+    margin: 0 auto;
+    max-width: 800px;
+    line-height: 1.7;
 }
 
 .gallery-grid {
-    margin-top: 40px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
 .gallery-category {
-    margin-bottom: 50px;
+    margin-bottom: 0;
 }
 
 .gallery-category h3 {
@@ -16,11 +49,12 @@ body {
     font-size: 28px;
     margin-bottom: 20px;
     text-align: center;
+    letter-spacing: 1px;
 }
 
 .image-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 20px;
     margin-top: 20px;
 }
@@ -39,6 +73,23 @@ body {
 }
 
 @media (max-width: 768px) {
+    .mainbody {
+        margin-top: 80px;
+        padding: 0 20px 60px;
+    }
+
+    .content-section h2 {
+        font-size: 32px;
+    }
+
+    .content-section > p {
+        font-size: 16px;
+    }
+
+    .gallery-grid {
+        gap: 30px;
+    }
+
     .image-grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 15px;
@@ -50,5 +101,28 @@ body {
     
     .gallery-category h3 {
         font-size: 24px;
+    }
+}
+
+@media (max-width: 500px) {
+    .mainbody {
+        margin-top: 70px;
+        padding: 0 16px 50px;
+    }
+
+    .content-section h2 {
+        font-size: 26px;
+    }
+
+    .content-section > p {
+        font-size: 15px;
+    }
+
+    .image-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .image-grid img {
+        height: 180px;
     }
 }

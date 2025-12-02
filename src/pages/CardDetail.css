@@ -1,29 +1,32 @@
 /* Card detail page styles for Mission, Vision, Values, Faculty, Facilities */
 .card-detail-page {
   min-height: 100vh;
-  width: 100vw;
-  max-width: none;
-  margin: 0;
-  padding: 0;
+  width: 100%;
+  margin: 0 auto;
+  padding: 100px 20px 80px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+  overflow-x: hidden;
 }
 
 .card-detail-content {
   width: 100%;
-  max-width: 700px;
-  padding: 40px 24px;
+  max-width: 760px;
+  padding: clamp(28px, 5vw, 48px);
   background: rgba(255,255,255,0.7);
   border-radius: 22px;
   box-shadow: 0 8px 32px rgba(44,62,80,0.14);
+  text-align: center;
 }
 
 .card-detail-page h2 {
-  background: linear-gradient(135deg, #dc2626 0%, #1e40af 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-  font-size: 2.2rem;
+  background: linear-gradient(135deg, #dc2626 0%, #1e40af 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: clamp(1.75rem, 4vw, 2.4rem);
   margin-bottom: 18px;
   text-align: center;
   letter-spacing: 1px;
@@ -32,7 +35,7 @@
 
 .card-detail-page p {
   color: #333;
-  font-size: 1.15rem;
+  font-size: clamp(1rem, 2.2vw, 1.15rem);
   line-height: 1.8;
   margin-bottom: 16px;
   text-align: center;
@@ -60,25 +63,21 @@
   position: absolute;
   left: 0;
 }
+.card-detail-page ul {
+  margin-top: 18px;
+}
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-.card-detail-page:hover {
-  box-shadow: 0 12px 40px rgba(22,121,29,0.18);
-  transform: scale(1.03);
-  transition: box-shadow 0.3s, transform 0.3s;
-}
-
 /* Mission page specific styles */
 .mission-page {
   min-height: 100vh;
-  width: 100vw;
-  max-width: none;
-  margin: 0;
-  padding: 0;
+  width: 100%;
+  margin: 0 auto;
+  padding: 100px 20px 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -159,6 +158,18 @@
 @media (max-width: 900px) {
   .mission-content {
     padding: 24px 8px;
-    max-width: 98vw;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .card-detail-page,
+  .mission-page {
+    padding: 90px 16px 60px;
+  }
+
+  .card-detail-content,
+  .mission-content {
+    padding: 24px 18px;
   }
 }

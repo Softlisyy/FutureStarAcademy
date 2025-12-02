@@ -8,9 +8,9 @@ const Work = () => {
   useScrollToTop();
   
   return (
-    <>
+    <div className='work-page'>
         <Navbar />
-        <div className='mainbody'>
+        <div className='work-body'>
         <h1 className="work-heading">Work With Us </h1>
         <p className='work-para'>Our Work at FSA page highlights current opportunities to join our team of educators and 
         staff who are committed to providing quality education and a nurturing environment for every 
@@ -37,7 +37,7 @@ const Work = () => {
         </div>
         </div>
         
-    </>
+    </div>
   );
 };
 

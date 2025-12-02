@@ -820,3 +820,114 @@ body {
     font-size: 15px;
   }
 }
+
+/* Global mobile tweaks */
+@media (max-width: 768px) {
+    .mainbody {
+        padding: 80px 1.25rem 0;
+    }
+
+    .mainphoto {
+        height: 420px;
+        padding: 20px 12px;
+    }
+
+    .l1 {
+        font-size: 34px;
+        padding: 15px 25px;
+        max-width: 100%;
+    }
+
+    .secondpart {
+        flex-direction: column;
+        padding: 35px 1.5rem;
+        text-align: left;
+    }
+
+    .text {
+        padding: 20px;
+    }
+
+    .text h1 {
+        font-size: 26px;
+    }
+
+    .text h2 {
+        font-size: 30px;
+    }
+
+    .text p {
+        font-size: 18px;
+    }
+
+    .TPH2 {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .thirdpart p {
+        width: 100%;
+        font-size: 18px;
+        padding-right: 0;
+    }
+
+    .festival-image-container {
+        width: 100%;
+    }
+
+    .video-tour-section {
+        padding: 45px 1.25rem;
+    }
+
+    .tour-description {
+        margin: 0 auto 25px;
+    }
+
+    .fourthpart {
+        padding: 40px 1.5rem;
+    }
+
+    .stat-card {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .mainbody {
+        padding: 70px 1rem 0;
+    }
+
+    .mainphoto {
+        height: 340px;
+    }
+
+    .l1 {
+        font-size: 28px;
+    }
+
+    .text h2 {
+        font-size: 26px;
+    }
+
+    .text p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .tour-video {
+        min-height: 240px;
+    }
+
+    .fourthpart .image-container {
+        padding: 16px;
+    }
+
+    .stat-card {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .stat-number {
+        font-size: 36px;
+    }
+}

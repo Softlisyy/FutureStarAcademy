@@ -16,13 +16,13 @@
    ======================================== */
 .admissions-hero {
   position: relative;
-  min-height: 90vh;
+  min-height: clamp(520px, 85vh, 900px);
   display: flex;
   align-items: center;
   justify-content: center;
   background: #FFFFFF;
   overflow: hidden;
-  padding: 120px 5% 80px;
+  padding: clamp(100px, 14vh, 140px) 5% clamp(60px, 9vh, 100px);
   border-bottom: 1px solid #E5E7EB;
 }
 
@@ -69,7 +69,7 @@
 }
 
 .title-line-1 {
-  font-size: 38px;
+  font-size: clamp(28px, 4vw, 38px);
   font-weight: 300;
   color: #1D3557;
   letter-spacing: 1px;
@@ -77,7 +77,7 @@
 }
 
 .title-line-2 {
-  font-size: 68px;
+  font-size: clamp(40px, 8vw, 68px);
   font-weight: 800;
   background: linear-gradient(135deg, #E63946 0%, #1D3557 100%);
   -webkit-background-clip: text;
@@ -88,7 +88,7 @@
 }
 
 .hero-description {
-  font-size: 20px;
+  font-size: clamp(16px, 2.4vw, 20px);
   color: #64748B;
   max-width: 800px;
   margin: 0 auto 40px;
@@ -98,7 +98,7 @@
 
 .hero-cta-group {
   display: flex;
-  gap: 20px;
+  gap: clamp(16px, 3vw, 24px);
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -212,7 +212,7 @@
 .section-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 100px 5%;
+  padding: clamp(70px, 10vw, 100px) 5%;
 }
 
 .section-header {
@@ -235,7 +235,7 @@
 }
 
 .section-title {
-  font-size: 48px;
+  font-size: clamp(32px, 5vw, 48px);
   font-weight: 800;
   background: linear-gradient(135deg, #E63946 0%, #1D3557 100%);
   -webkit-background-clip: text;
@@ -357,7 +357,7 @@
 
 .documents-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 20px;
   max-width: 1000px;
   margin: 40px auto 0;
@@ -458,7 +458,7 @@
 }
 
 .dates-header h2 {
-  font-size: 48px;
+  font-size: clamp(34px, 5vw, 48px);
   font-weight: 800;
   background: linear-gradient(135deg, #E63946 0%, #1D3557 100%);
   -webkit-background-clip: text;
@@ -470,7 +470,7 @@
 
 .dates-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 35px;
   max-width: 1000px;
   margin: 0 auto;
@@ -559,7 +559,7 @@
 .application-wrapper {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
-  gap: 35px;
+  gap: clamp(24px, 4vw, 40px);
   align-items: start;
   max-width: 1100px;
   margin: 0 auto;
@@ -571,7 +571,7 @@
 }
 
 .application-title {
-  font-size: 24px;
+  font-size: clamp(22px, 3.2vw, 26px);
   font-weight: 800;
   background: linear-gradient(135deg, #E63946 0%, #1D3557 100%);
   -webkit-background-clip: text;
@@ -826,7 +826,7 @@
 }
 
 .cta-content h2 {
-  font-size: 42px;
+  font-size: clamp(32px, 5vw, 42px);
   font-weight: 800;
   background: linear-gradient(135deg, #E63946 0%, #1D3557 100%);
   -webkit-background-clip: text;
@@ -844,25 +844,26 @@
   line-height: 1.8;
 }
 
+
 .cta-large {
   background: linear-gradient(135deg, #E63946 0%, #B16A76 50%, #1D3557 100%);
   color: #FFFFFF;
-  padding: 16px 45px;
+  padding: clamp(16px, 3.5vw, 22px) clamp(40px, 7vw, 55px);
   border: none;
   border-radius: 50px;
-  font-size: 16px;
+  font-size: clamp(16px, 2.5vw, 19px);
   font-weight: 700;
   cursor: pointer;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  box-shadow: 0 10px 30px rgba(230, 57, 70, 0.3);
+  gap: 12px;
+  box-shadow: 0 15px 40px rgba(230, 57, 70, 0.35);
 }
 
 .cta-large:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 15px 40px rgba(230, 57, 70, 0.4);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 20px 55px rgba(230, 57, 70, 0.4);
 }
 
 .cta-arrow {
@@ -872,27 +873,6 @@
 
 .cta-large:hover .cta-arrow {
   transform: translateX(5px);
-}
-
-.cta-large {
-  background: linear-gradient(135deg, #E63946 0%, #B16A76 50%, #1D3557 100%);
-  color: #FFFFFF;
-  padding: 22px 55px;
-  border: none;
-  border-radius: 50px;
-  font-size: 19px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.4s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: 15px;
-  box-shadow: 0 15px 40px rgba(230, 57, 70, 0.3);
-}
-
-.cta-large:hover {
-  transform: translateY(-5px) scale(1.03);
-  box-shadow: 0 20px 50px rgba(230, 57, 70, 0.4);
 }
 
 .cta-icon {
@@ -961,15 +941,6 @@
 
   .section-title {
     font-size: 40px;
-  }
-
-  .documents-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
-  }
-
-  .dates-grid {
-    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -1068,6 +1039,36 @@
     justify-content: center;
   }
 }
+
+@media (max-width: 600px) {
+  .admissions-hero {
+    padding: 90px 6% 50px;
+  }
+
+  .hero-description {
+    font-size: 15px;
+  }
+
+  .section-container,
+  .process-section,
+  .documents-section,
+  .application-section,
+  .final-cta,
+  .dates-section {
+    padding: 50px 6% 45px;
+  }
+
+  .application-form-wrapper {
+    padding: 18px 16px;
+  }
+
+  .documents-grid {
+    gap: 14px;
+  }
+
+  .dates-grid {
+    gap: 20px;
+  }
 }
 
 @media (max-width: 480px) {

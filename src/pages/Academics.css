@@ -1,17 +1,22 @@
 /* Academics Page Styles */
-body {
+.academics-page {
     background-color: #ffffff;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
+
 .mainbody{
-    margin-top: 3%;
+    margin: 90px auto 0;
+    max-width: 1200px;
+    padding: 0 24px 80px;
 }
 
 .content-section {
     padding: 60px 5%;
     width: 100%;
-    margin: 0;
+    margin: 0 auto;
     background-color: #ffffff;
-    
+    max-width: 1200px;
 }
 .achievements-heading{
     /* background: linear-gradient(135deg, #dc2626 0%, #1e40af 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; */
@@ -38,6 +43,7 @@ body {
     background: linear-gradient(90deg, #E63946 0%, #1D3557 100%);
     border-radius: 2px;
 }
+
 .achievements-section{
     display: flex;
     flex-direction: row;
@@ -53,8 +59,8 @@ body {
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: fit-content;
-    height: fit-content;
+    width: 100%;
+    max-width: 360px;
 }
 
 .achievement-image-container:hover {
@@ -67,7 +73,10 @@ body {
     transition: opacity 0.3s ease;
     display: block;
     border-radius: 10px;
-    width: 380px;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
 }
 
 .achievement-image-hover {
@@ -88,8 +97,9 @@ body {
     margin-top: 4%;
     display: flex;
     justify-content: center;
-    gap: 100px;
-    padding: 40px;
+    gap: 30px;
+    padding: 40px 0;
+    flex-wrap: wrap;
 }
 
 .content-section h2 {
@@ -117,10 +127,11 @@ body {
     gap: 30px;
     margin: 40px 0;
     padding: 0 20px;
+    flex-wrap: wrap;
 }
 
 .feature {
-    flex: 1;
+    flex: 1 1 30%;
     text-align: center;
     padding: 30px 25px;
     background: linear-gradient(135deg, rgba(220, 38, 38, 0.03) 0%, rgba(30, 64, 175, 0.03) 100%);
@@ -128,6 +139,7 @@ body {
     border: 2px solid rgba(30, 64, 175, 0.2);
     transition: all 0.3s ease;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    min-width: 280px;
 }
 
 .feature:hover {
@@ -164,8 +176,8 @@ body {
     transition: transform 0.3s ease;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    width: 100% !important;
-    height: 220px !important;
+    width: 100%;
+    aspect-ratio: 4 / 3;
     object-fit: cover;
 }
 
@@ -188,6 +200,7 @@ body {
     background: rgba(255, 255, 255, 0.6);
     border-radius: 8px;
     transition: all 0.3s ease;
+    word-break: break-word;
 }
 
 .feature-list li:hover {
@@ -196,52 +209,6 @@ body {
     transform: translateX(5px);
 }
 
-@media (max-width: 768px) {
-    .content-section {
-        padding: 40px 5%;
-    }
-    
-    .content-section h2 {
-        font-size: 28px;
-    }
-    
-    .achievements-sectionone {
-        flex-direction: column;
-        padding: 0 20px;
-        align-items: center;
-    }
-    
-    .achievement-image-container {
-        width: fit-content;
-    }
-    
-    .academic-features {
-        flex-direction: column;
-        align-items: center;
-        padding: 0;
-    }
-
-    .feature {
-        width: 100%;
-        max-width: 500px;
-    }
-    
-    .achievements-sectiontwo {
-        flex-direction: column;
-        padding: 30px 20px;
-        gap: 30px;
-    }
-    
-    .achievements-sectiontwo .achievement-image-container {
-        min-width: 100%;
-        max-width: 400px;
-    }
-    
-    .achievements-sectionpara {
-        padding: 20px;
-        font-size: 16px;
-    }
-}
 .achievements-sectiontwo{
     display: flex;
     justify-content: space-between;
@@ -256,7 +223,9 @@ body {
 }
 
 .achievements-sectiontwo .achievement-image-container {
-    flex: 0 0 auto;
+    flex: 1 1 320px;
+    max-width: 420px;
+    width: 100%;
 }
 
 .achievements-sectionpara{
@@ -270,4 +239,102 @@ body {
     border-radius: 20px;
     border-left: 5px solid #1e40af;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 1024px) {
+    .mainbody {
+        margin-top: 80px;
+        padding: 0 20px 70px;
+    }
+
+    .feature {
+        flex: 1 1 45%;
+    }
+
+    .achievements-sectiontwo {
+        padding: 40px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .content-section {
+        padding: 40px 5%;
+    }
+
+    .content-section h2 {
+        font-size: 28px;
+    }
+
+    .achievements-sectionone {
+        flex-direction: column;
+        padding: 0 20px;
+        align-items: center;
+    }
+
+    .achievement-image-container {
+        max-width: 320px;
+    }
+
+    .academic-features {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .feature {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .achievements-sectiontwo {
+        flex-direction: column;
+        padding: 30px 20px;
+        gap: 30px;
+    }
+
+    .achievements-sectiontwo .achievement-image-container {
+        min-width: 100%;
+        max-width: 400px;
+    }
+
+    .achievements-sectionpara {
+        padding: 20px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .mainbody {
+        margin-top: 70px;
+        padding: 0 16px 60px;
+    }
+
+    .achievements-heading {
+        font-size: 24px;
+        letter-spacing: 1px;
+        margin-top: 40px;
+    }
+
+    .content-section h2 {
+        font-size: 24px;
+        letter-spacing: 1px;
+    }
+
+    .feature {
+        padding: 24px 20px;
+        min-width: auto;
+    }
+
+    .feature h3 {
+        font-size: 22px;
+    }
+
+    .feature-list li {
+        font-size: 14px;
+    }
+
+    .achievements-sectionpara {
+        padding: 20px;
+        font-size: 15px;
+    }
 }

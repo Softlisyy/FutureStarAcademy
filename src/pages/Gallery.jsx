@@ -8,7 +8,7 @@ const Gallery = () => {
   useScrollToTop();
   
   return (
-    <>
+    <div className="gallery-page">
         <Navbar />
         
       <div className="mainbody">
@@ -53,7 +53,7 @@ const Gallery = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

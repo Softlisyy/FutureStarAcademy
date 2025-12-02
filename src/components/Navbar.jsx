@@ -9,7 +9,27 @@ const Navbar = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const navbarRef = useRef(null);
   const location = useLocation();
-  const isHomePage = location.pathname === '/' || location.pathname === '/home';
+
+  const navLinks = [
+    { to: '/', label: 'Home' },
+    { to: '/academics', label: 'Academics' },
+    { to: '/introduction', label: 'Introduction' },
+    { to: '/gallery', label: 'Gallery' },
+    { to: '/about-us', label: 'About' },
+    { to: '/contact', label: 'Contact' }
+  ];
+
+  const mobileOnlyLinks = [
+    { to: '/staff', label: 'Staff' },
+    { to: '/work', label: 'Careers' }
+  ];
+
+  const isActiveLink = (path) => {
+    if (path === '/') {
+      return location.pathname === '/';
+    }
+    return location.pathname.startsWith(path);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,6 +77,13 @@ const Navbar = () => {
     setIsMobileMenuOpen(false);
   };
 
+  useEffect(() => {
+    document.body.style.overflow = isMobileMenuOpen ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMobileMenuOpen]);
+
   // Close mobile menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -86,43 +113,54 @@ const Navbar = () => {
         </Link>
         
         <ul className="nav-menu">
-          <li className="nav-item">
-            <Link to="/" className="nav-link">Home</Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/academics" className="nav-link">Academics</Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/introduction" className="nav-link">Introduction</Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/gallery" className="nav-link">Gallery</Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/about-us" className="nav-link">About</Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/contact" className="nav-link">Contact</Link>
-          </li>
+          {navLinks.map(({ to, label }) => (
+            <li className="nav-item" key={to}>
+              <Link
+                to={to}
+                className={`nav-link ${isActiveLink(to) ? 'active' : ''}`}
+              >
+                {label}
+              </Link>
+            </li>
+          ))}
         </ul>
         
         <Link to="/admissions" className="nav-cta">Enroll Now</Link>
         
-        <button className="mobile-menu-toggle" onClick={toggleMobileMenu}>
+        <button
+          className={`mobile-menu-toggle ${isMobileMenuOpen ? 'open' : ''}`}
+          onClick={toggleMobileMenu}
+          aria-label="Toggle navigation menu"
+          aria-expanded={isMobileMenuOpen}
+          aria-controls="mobileNav"
+        >
           <span className="hamburger-line"></span>
           <span className="hamburger-line"></span>
           <span className="hamburger-line"></span>
         </button>
       </div>
       
-      <div className={`mobile-menu ${isMobileMenuOpen ? 'active' : ''}`}>
+      <div className={`mobile-menu ${isMobileMenuOpen ? 'active' : ''}`} id="mobileNav">
         <ul className="mobile-nav-menu">
-          <li><Link to="/" className="mobile-nav-link" onClick={closeMobileMenu}>Home</Link></li>
-          <li><Link to="/about-us" className="mobile-nav-link" onClick={closeMobileMenu}>About</Link></li>
-          <li><Link to="/academics" className="mobile-nav-link" onClick={closeMobileMenu}>Programs</Link></li>
-          <li><Link to="/admissions" className="mobile-nav-link" onClick={closeMobileMenu}>Admissions</Link></li>
-          <li><Link to="/gallery" className="mobile-nav-link" onClick={closeMobileMenu}>Gallery</Link></li>
-          <li><Link to="/staff" className="mobile-nav-link" onClick={closeMobileMenu}>Staff</Link></li>
+          {navLinks.map(({ to, label }) => (
+            <li key={to}>
+              <Link to={to} className="mobile-nav-link" onClick={closeMobileMenu}>
+                {label}
+              </Link>
+            </li>
+          ))}
+          {mobileOnlyLinks.map(({ to, label }) => (
+            <li key={to}>
+              <Link to={to} className="mobile-nav-link" onClick={closeMobileMenu}>
+                {label}
+              </Link>
+            </li>
+          ))}
+          <li>
+            <Link to="/admissions" className="mobile-nav-link mobile-cta" onClick={closeMobileMenu}>
+              Enroll Now
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>

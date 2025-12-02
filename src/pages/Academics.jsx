@@ -8,7 +8,7 @@ const Academics = () => {
   useScrollToTop();
   
   return (
-    <>
+    <div className="academics-page">
       <Navbar />
 
       <div className="mainbody">
@@ -23,22 +23,16 @@ const Academics = () => {
               <h3 className='achievements-heading'>Our Achivements </h3>
             <div className='achievements-sectionone'>
               <div className="achievement-image-container">
-                <img src={`${import.meta.env.BASE_URL}picture/ach1.jpg`} alt="" className="achievement-image-main" 
-                height={'330px'} style={{borderRadius:"10px"}}/>
-                <img src={`${import.meta.env.BASE_URL}picture/new.jpeg`} alt="" className="achievement-image-hover" 
-                height={'330px'} style={{borderRadius:"10px"}}/>
+                <img src={`${import.meta.env.BASE_URL}picture/ach1.jpg`} alt="" className="achievement-image-main" />
+                <img src={`${import.meta.env.BASE_URL}picture/new.jpeg`} alt="" className="achievement-image-hover" />
               </div>
               <div className="achievement-image-container">
-                <img src={`${import.meta.env.BASE_URL}picture/ach2.jpg`} alt="" className="achievement-image-main" 
-                height={'330px'} style={{borderRadius:"10px"}}/>
-                <img src={`${import.meta.env.BASE_URL}picture/ach5Mumbai.jpeg`} alt="" className="achievement-image-hover" 
-                height={'330px'} style={{borderRadius:"10px"}}/>
+                <img src={`${import.meta.env.BASE_URL}picture/ach2.jpg`} alt="" className="achievement-image-main" />
+                <img src={`${import.meta.env.BASE_URL}picture/ach5Mumbai.jpeg`} alt="" className="achievement-image-hover" />
               </div>
               <div className="achievement-image-container">
-                <img src={`${import.meta.env.BASE_URL}picture/ach4.jpg`} alt="" className="achievement-image-main" 
-                height={'330px'} style={{borderRadius:"10px"}}/>
-                <img src={`${import.meta.env.BASE_URL}picture/diya.jpg`} alt="" className="achievement-image-hover" 
-                height={'330px'} style={{borderRadius:"10px"}}/>
+                <img src={`${import.meta.env.BASE_URL}picture/ach4.jpg`} alt="" className="achievement-image-main" />
+                <img src={`${import.meta.env.BASE_URL}picture/diya.jpg`} alt="" className="achievement-image-hover" />
               </div>
             </div>
           
@@ -46,8 +40,7 @@ const Academics = () => {
           <div className="academic-features">
             <div className="feature">
               <h3>Pre-primary/ Early Childhood </h3>
-              <img src={`${import.meta.env.BASE_URL}picture/preprimary.jpg`} alt="Junior Class" className="feature-image" 
-              width={'270px'} height={'200px'} style={{borderRadius:"5px"}}/>
+              <img src={`${import.meta.env.BASE_URL}picture/preprimary.jpg`} alt="Junior Class" className="feature-image" />
               <p>Early childhood development focusing on basic skills and 
                 social interaction. Children are introduced to play-based learning, 
                 storytelling, music, art, and motor skill development to build a strong foundation
@@ -60,8 +53,7 @@ const Academics = () => {
             </div>
             <div className="feature">
               <h3>Primary/ Elementary</h3>
-              <img src={`${import.meta.env.BASE_URL}picture/junior.jpg`} alt="Junior Class" className="feature-image" 
-              width={'270px'} height={'200px'} style={{borderRadius:"5px", marginTop:"30px"}} padding top='4px'/>
+              <img src={`${import.meta.env.BASE_URL}picture/junior.jpg`} alt="Junior Class" className="feature-image" />
               <p>
                 Foundation learning with focus on core subjects and creative development.The 
                 curriculum emphasizes literacy, numeracy, critical thinking, and problem-solving, 
@@ -75,8 +67,7 @@ const Academics = () => {
             </div>
             <div className="feature">
               <h3>Secondary Education</h3>
-              <img src={`${import.meta.env.BASE_URL}picture/secondary.jpg`} alt="Junior Class" className="feature-image" 
-              width={'270px'} height={'200px'} style={{borderRadius:"5px" , marginTop:"30px"}}/>
+              <img src={`${import.meta.env.BASE_URL}picture/secondary.jpg`} alt="Junior Class" className="feature-image" />
               <p>
                 Advanced curriculum preparing students for higher education and beyond.Students are 
                 guided through in-depth subject knowledge, leadership skills, digital literacy, and 
@@ -93,10 +84,8 @@ const Academics = () => {
           <h3 className='achievements-heading'>Student Sucess Stories</h3>
           <div className='achievements-sectiontwo'>
             <div className="achievement-image-container">
-              <img src={`${import.meta.env.BASE_URL}picture/achievent1.jpg`} alt="" className="achievement-image-main" 
-              height={'400px'} style={{borderRadius:"10px"}}/>
-              <img src={`${import.meta.env.BASE_URL}picture/diya.jpg`} alt="" className="achievement-image-hover" 
-              height={'430px'} style={{borderRadius:"10px"}}/>
+              <img src={`${import.meta.env.BASE_URL}picture/achievent1.jpg`} alt="" className="achievement-image-main" />
+              <img src={`${import.meta.env.BASE_URL}picture/diya.jpg`} alt="" className="achievement-image-hover" />
             </div>
               <p className='achievements-sectionpara'> We proudly congratulate for securing a perfect 4.0 GPA in the Grade 10 examination.
               This remarkable accomplishment reflects your hard work, dedication, and commitment to 
@@ -107,12 +96,9 @@ const Academics = () => {
             </div>
 
 
-
-
-
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

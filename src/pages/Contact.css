@@ -8,10 +8,10 @@
   width: 100%;
   min-height: 100vh;
   background: #FFFFFF;
-  padding: 100px 0 80px;
+  padding: clamp(70px, 10vw, 110px) 0 clamp(60px, 8vw, 90px);
   margin: 0;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 /* Animated Background Decorations */
@@ -76,9 +76,9 @@
 
 /* Container */
 .contact-container {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 5%;
+  padding: 0 clamp(16px, 5vw, 48px);
   position: relative;
   z-index: 1;
 }
@@ -114,14 +114,14 @@
 }
 
 .title-line {
-  font-size: 42px;
+  font-size: clamp(28px, 4.5vw, 42px);
   font-weight: 300;
   color: #1D3557;
   letter-spacing: 1px;
 }
 
 .title-highlight {
-  font-size: 64px;
+  font-size: clamp(38px, 8vw, 64px);
   font-weight: 800;
   background: linear-gradient(135deg, #E63946 0%, #1D3557 100%);
   -webkit-background-clip: text;
@@ -145,7 +145,7 @@
 }
 
 .header-description {
-  font-size: 18px;
+  font-size: clamp(16px, 2.4vw, 18px);
   color: #64748B;
   max-width: 700px;
   margin: 0 auto;
@@ -158,10 +158,10 @@
    ======================================== */
 .contact-content {
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap: 50px;
+  grid-template-columns: 1fr 1.2fr;
+  gap: clamp(30px, 4vw, 60px);
   width: 100%;
-  margin-bottom: 80px;
+  margin-bottom: clamp(50px, 8vw, 90px);
   animation: fadeInUp 0.8s ease-out 0.2s both;
 }
 
@@ -192,8 +192,8 @@
 
 /* Info Cards Grid */
 .info-cards-grid {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 20px;
 }
 
@@ -201,10 +201,10 @@
   background: #FFFFFF;
   border: 2px solid #E5E7EB;
   border-radius: 20px;
-  padding: 30px 25px;
+  padding: 26px 24px;
   display: flex;
   align-items: flex-start;
-  gap: 20px;
+  gap: 18px;
   position: relative;
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -358,7 +358,7 @@
   background: #FFFFFF;
   border: 2px solid #E5E7EB;
   border-radius: 25px;
-  padding: 45px 50px;
+  padding: clamp(32px, 4vw, 50px);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
   animation: slideInRight 0.8s ease-out 0.3s both;
 }
@@ -581,9 +581,12 @@
 }
 
 .map-section h3 {
-  font-size: 32px;
+  font-size: clamp(26px, 4vw, 32px);
   font-weight: 700;
-  color: #FFFFFF;
+  background: linear-gradient(135deg, #E63946 0%, #1D3557 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   text-align: center;
   margin: 0 0 30px 0;
   letter-spacing: -0.5px;
@@ -678,15 +681,7 @@
 @media (max-width: 1200px) {
   .contact-content {
     grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .title-line {
-    font-size: 36px;
-  }
-
-  .title-highlight {
-    font-size: 52px;
+    gap: 35px;
   }
 }
 
@@ -765,6 +760,29 @@
   .circle-2,
   .circle-3 {
     opacity: 0.5;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-container {
+    padding: 0 5%;
+  }
+
+  .contact-content {
+    gap: 28px;
+  }
+
+  .contact-form-section {
+    padding: 28px 22px;
+  }
+
+  .info-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .quick-info-box {
+    flex-direction: column;
+    text-align: center;
   }
 }
 

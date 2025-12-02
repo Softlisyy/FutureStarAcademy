@@ -21,9 +21,10 @@ import Contact from './pages/Contact';
 import './App.css';
 
 function App() {
+  const basePath = (import.meta.env.BASE_URL || '/').replace(/\/$/, '');
   return (
 
-    <Router basename="/">
+    <Router basename={basePath}>
       <div className="App">
         
         <Routes>
