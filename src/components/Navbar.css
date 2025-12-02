@@ -7,10 +7,10 @@
     right: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0.95);
+    background: #ffffff;
     backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
 }
 
@@ -37,6 +37,8 @@
     justify-content: space-between;
     padding: 1rem 3rem;
     gap: 2rem;
+    position: relative;
+    z-index: 2;
 }
 
 @media (max-width: 1024px) {
@@ -139,6 +141,8 @@
     gap: 5px;
     cursor: pointer;
     padding: 8px;
+    position: relative;
+    z-index: 3;
 }
 
 .hamburger-line {
@@ -162,25 +166,33 @@
 }
 
 .mobile-menu {
-    position: fixed;
-    top: 0;
+    position: absolute;
+    top: 100%;
     left: 0;
     right: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.96);
-    backdrop-filter: blur(12px);
-    border-top: 1px solid rgba(0, 0, 0, 0.08);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-    padding: 6rem 2rem 2rem;
+    background: #ffffff;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-top: none;
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.12);
+    padding: 1.5rem 1.25rem 2rem;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.3s ease;
-    z-index: 999;
+    transform: translateY(-10px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    max-height: 0;
+    overflow: hidden;
+    z-index: 1;
 }
 
 .mobile-menu.active {
     opacity: 1;
     pointer-events: auto;
+    transform: translateY(0);
+    max-height: 80vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .mobile-nav-menu {
@@ -216,19 +228,26 @@
 }
 
 @media (max-width: 768px) {
-    .nav-menu { 
-        display: none; 
-    }
-
+    .nav-menu,
     .nav-cta {
         display: none;
     }
 
-    .mobile-menu-toggle { 
-        display: flex; 
+    .mobile-menu-toggle {
+        display: flex;
     }
 
     .nav-container {
         padding: 0.85rem 1.25rem;
+    }
+}
+
+@media (max-width: 540px) {
+    .logo-text {
+        font-size: 1rem;
+    }
+
+    .nav-container {
+        gap: 1rem;
     }
 }

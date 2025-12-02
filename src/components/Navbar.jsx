@@ -19,11 +19,6 @@ const Navbar = () => {
     { to: '/contact', label: 'Contact' }
   ];
 
-  const mobileOnlyLinks = [
-    { to: '/staff', label: 'Staff' },
-    { to: '/work', label: 'Careers' }
-  ];
-
   const isActiveLink = (path) => {
     if (path === '/') {
       return location.pathname === '/';
@@ -143,13 +138,6 @@ const Navbar = () => {
       <div className={`mobile-menu ${isMobileMenuOpen ? 'active' : ''}`} id="mobileNav">
         <ul className="mobile-nav-menu">
           {navLinks.map(({ to, label }) => (
-            <li key={to}>
-              <Link to={to} className="mobile-nav-link" onClick={closeMobileMenu}>
-                {label}
-              </Link>
-            </li>
-          ))}
-          {mobileOnlyLinks.map(({ to, label }) => (
             <li key={to}>
               <Link to={to} className="mobile-nav-link" onClick={closeMobileMenu}>
                 {label}
